@@ -38,16 +38,16 @@ make clean
 make sim-outorder
 ```
 
-### 執行實驗
-腳本目前已移動至 `scripts/` 資料夾：
+### 實驗
+腳本都放在`scripts/` 資料夾：
 ```bash
-# Ex : 執行 Phase Sweep 實驗
+# 執行 Phase Sweep 實驗
 ./scripts/run_phase_sweep.sh
 ```
 
 ### 產生圖表
 ```bash
-# Ex : 使用 Python 處理數據
+# 使用 Python 處理數據
 python3 ./scripts/make_ipc_norm_tsv.py
 # 使用 Gnuplot 繪圖
 gnuplot ./scripts/plot_ul2_norm.gp
