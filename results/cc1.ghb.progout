@@ -1,0 +1,22 @@
+gcc2_compiled.:
+___gnu_compiled_c:
+
+time in parse: 0.000000
+time in integration: 0.000000
+time in jump: 0.000000
+time in cse: 0.000000
+time in loop: 0.000000
+time in cse2: 0.000000
+time in flow: 0.000000
+time in combine: 0.000000
+time in sched: 0.000000
+time in local-alloc: 0.000000
+time in global-alloc: 0.000000
+time in sched2: 0.000000
+time in dbranch: 0.000000
+time in shorten-branch: 0.000000
+time in stack-reg: 0.000000
+time in final: 0.000000
+time in varconst: 0.000000
+time in symout: 0.000000
+time in dump: 0.000000

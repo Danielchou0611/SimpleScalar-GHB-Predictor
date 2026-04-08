@@ -1,0 +1,4 @@
+bench	baseline	best
+cc1	1.0	1.002347
+perl	1.0	1.002833
+go	1.0	1.000054

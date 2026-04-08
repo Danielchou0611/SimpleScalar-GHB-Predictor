@@ -1,0 +1,183 @@
+gcc `./sysprobe -flags` -DDEBUG -O0 -g -Wall   -c sim-cache.c
+In file included from sim-cache.c:59:
+sim-cache.c: In function ‘sim_check_options’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:345:9: note: in expansion of macro ‘fatal’
+  345 |         fatal("the l1 data cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:352:9: note: in expansion of macro ‘fatal’
+  352 |         fatal("bad l1 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:364:13: note: in expansion of macro ‘fatal’
+  364 |             fatal("bad l2 D-cache parms: "
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:379:9: note: in expansion of macro ‘fatal’
+  379 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:385:9: note: in expansion of macro ‘fatal’
+  385 |         fatal("I-cache l1 cannot access D-cache l1 as it's undefined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:390:9: note: in expansion of macro ‘fatal’
+  390 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:396:9: note: in expansion of macro ‘fatal’
+  396 |         fatal("I-cache l1 cannot access D-cache l2 as it's undefined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:401:9: note: in expansion of macro ‘fatal’
+  401 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:408:9: note: in expansion of macro ‘fatal’
+  408 |         fatal("bad l1 I-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:419:13: note: in expansion of macro ‘fatal’
+  419 |             fatal("I-cache l2 cannot access D-cache l2 as it's undefined");
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:426:13: note: in expansion of macro ‘fatal’
+  426 |             fatal("bad l2 I-cache parms: "
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:441:9: note: in expansion of macro ‘fatal’
+  441 |         fatal("bad TLB parms: <name>:<nsets>:<page_size>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:455:9: note: in expansion of macro ‘fatal’
+  455 |         fatal("bad TLB parms: <name>:<nsets>:<page_size>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-cache.c: In function ‘sim_reg_stats’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:557:9: note: in expansion of macro ‘fatal’
+  557 |         fatal("cannot locate any statistic named `%s'", pcstat_vars[i]);
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:561:9: note: in expansion of macro ‘fatal’
+  561 |         fatal("`-pcstat' statistical variable `%s' is not an integral type",
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:121:13: note: in expansion of macro ‘panic’
+  121 |          : (panic("bad stat class"), 0))))
+      |             ^~~~~
+sim-cache.c:566:28: note: in expansion of macro ‘STATVAL’
+  566 |       pcstat_lastvals[i] = STATVAL(stat);
+      |                            ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-cache.c: In function ‘sim_main’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:789:11: note: in expansion of macro ‘panic’
+  789 |           panic("attempted to execute a bogus opcode");
+      |           ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:793:9: note: in expansion of macro ‘fatal’
+  793 |         fatal("fault (%d) detected @ 0x%08p", fault, regs.regs_PC);
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-cache.c:121:13: note: in expansion of macro ‘panic’
+  121 |          : (panic("bad stat class"), 0))))
+      |             ^~~~~
+sim-cache.c:809:20: note: in expansion of macro ‘STATVAL’
+  809 |           newval = STATVAL(pcstat_stats[i]);
+      |                    ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+gcc -o sim-cache `./sysprobe -flags` -DDEBUG -O0 -g -Wall   sim-cache.o cache.o main.o syscall.o memory.o regs.o loader.o endian.o dlite.o symbol.o eval.o options.o stats.o eio.o range.o misc.o machine.o libexo/libexo.a `./sysprobe -libs` -lm

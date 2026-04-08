@@ -1,0 +1,291 @@
+gcc `./sysprobe -flags` -DDEBUG -O0 -g -Wall   -c loader.c
+In file included from loader.c:56:
+loader.c: In function ‘ld_load_prog’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:231:9: note: in expansion of macro ‘fatal’
+  231 |         fatal("bad initial checkpoint in EIO file");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:244:13: note: in expansion of macro ‘fatal’
+  244 |             fatal("file `%s' does not appear to be a checkpoint file",
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:276:5: note: in expansion of macro ‘fatal’
+  276 |     fatal("checkpoints only supported while EIO tracing");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:445:7: note: in expansion of macro ‘fatal’
+  445 |       fatal("cannot open executable `%s'", argv[0]);
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:448:7: note: in expansion of macro ‘fatal’
+  448 |       fatal("cannot read header from executable `%s'", argv[0]);
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:463:7: note: in expansion of macro ‘fatal’
+  463 |       fatal("PISA simulator cannot run Alpha binary `%s'", argv[0]);
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:465:7: note: in expansion of macro ‘fatal’
+  465 |       fatal("bad magic number in executable `%s' (not an executable?)",
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:469:7: note: in expansion of macro ‘fatal’
+  469 |       fatal("cannot read AOUT header from executable `%s'", argv[0]);
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:488:5: note: in expansion of macro ‘debug’
+  488 |     debug("processing %d sections in `%s'...", fhdr.f_nscns, argv[0]);
+      |     ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:497:11: note: in expansion of macro ‘fatal’
+  497 |           fatal("could not reset location in executable");
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:499:11: note: in expansion of macro ‘fatal’
+  499 |           fatal("could not read section %d from executable", i);
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:512:15: note: in expansion of macro ‘fatal’
+  512 |               fatal("out of virtual memory");
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:515:15: note: in expansion of macro ‘fatal’
+  515 |               fatal("could not read `.text' from executable", i);
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:517:15: note: in expansion of macro ‘fatal’
+  517 |               fatal("could not read text section from executable");
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:562:15: note: in expansion of macro ‘fatal’
+  562 |               fatal("out of virtual memory");
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:565:15: note: in expansion of macro ‘fatal’
+  565 |               fatal("could not read `.text' from executable", i);
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:567:15: note: in expansion of macro ‘fatal’
+  567 |               fatal("could not read text section from executable");
+      |               ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:593:7: note: in expansion of macro ‘fatal’
+  593 |       fatal("could not close executable `%s'", argv[0]);
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:599:5: note: in expansion of macro ‘fatal’
+  599 |     fatal("executable is missing a `.text' section");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:601:5: note: in expansion of macro ‘fatal’
+  601 |     fatal("executable is missing a `.data' section");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:603:5: note: in expansion of macro ‘fatal’
+  603 |     fatal("program entry point not specified");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:617:11: note: in expansion of macro ‘fatal’
+  617 |           fatal("binary endian does not match host endian");
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:634:11: note: in expansion of macro ‘fatal’
+  634 |           fatal("binary endian does not match host endian");
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:691:7: note: in expansion of macro ‘fatal’
+  691 |       fatal("environment overflow, increase MD_MAX_ENVIRON in ss.h");
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:704:3: note: in expansion of macro ‘debug’
+  704 |   debug("ld_text_base: 0x%08x  ld_text_size: 0x%08x",
+      |   ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:706:3: note: in expansion of macro ‘debug’
+  706 |   debug("ld_data_base: 0x%08x  ld_data_size: 0x%08x",
+      |   ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:708:3: note: in expansion of macro ‘debug’
+  708 |   debug("ld_stack_base: 0x%08x  ld_stack_size: 0x%08x",
+      |   ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:710:3: note: in expansion of macro ‘debug’
+  710 |   debug("ld_prog_entry: 0x%08x", ld_prog_entry);
+      |   ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:719:7: note: in expansion of macro ‘fatal’
+  719 |       fatal("cannot perform fast decoding, too many opcodes");
+      |       ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:157:30: warning: passing argument 2 of ‘_debug’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  157 |             _debug(__FILE__, __FUNCTION__, __LINE__, fmt, ## args); \
+      |                              ^~~~~~~~~~~~
+loader.c:721:5: note: in expansion of macro ‘debug’
+  721 |     debug("sim: decoding text segment...");
+      |     ^~~~~
+misc.h:161:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  161 | _debug(char *file, char *func, int line, char *fmt, ...);
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:728:11: note: in expansion of macro ‘fatal’
+  728 |           fatal("could not read instruction memory");
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+loader.c:732:11: note: in expansion of macro ‘fatal’
+  732 |           fatal("could not write instruction memory");
+      |           ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~

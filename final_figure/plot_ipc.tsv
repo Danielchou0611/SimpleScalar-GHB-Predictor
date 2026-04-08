@@ -1,0 +1,4 @@
+bench	baseline	ghb
+cc1	1.0	1.002635
+perl	1.0	1.003325
+go	1.0	1.000105

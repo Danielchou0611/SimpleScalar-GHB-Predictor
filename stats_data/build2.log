@@ -1,0 +1,943 @@
+gcc `./sysprobe -flags` -DDEBUG -O0 -g -Wall   -c sim-outorder.c
+sim-outorder.c:482:15: error: static declaration of ‘sim_cycle’ follows non-static declaration
+  482 | static tick_t sim_cycle = 0;
+      |               ^~~~~~~~~
+sim-outorder.c:151:15: note: previous declaration of ‘sim_cycle’ with type ‘tick_t’ {aka ‘long long int’}
+  151 | extern tick_t sim_cycle;
+      |               ^~~~~~~~~
+sim-outorder.c:531:24: error: static declaration of ‘cache_dl2’ follows non-static declaration
+  531 | static struct cache_t *cache_dl2;
+      |                        ^~~~~~~~~
+sim-outorder.c:152:24: note: previous declaration of ‘cache_dl2’ with type ‘struct cache_t *’
+  152 | extern struct cache_t *cache_dl2;
+      |                        ^~~~~~~~~
+In file included from sim-outorder.c:59:
+sim-outorder.c: In function ‘il1_access_fn’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:650:9: note: in expansion of macro ‘panic’
+  650 |         panic("writes to instruction memory not supported");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:658:9: note: in expansion of macro ‘panic’
+  658 |         panic("writes to instruction memory not supported");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘il2_access_fn’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:674:5: note: in expansion of macro ‘panic’
+  674 |     panic("writes to instruction memory not supported");
+      |     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘sim_check_options’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1037:5: note: in expansion of macro ‘fatal’
+ 1037 |     fatal("bad fast forward count: %d", fastfwd_count);
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1040:5: note: in expansion of macro ‘fatal’
+ 1040 |     fatal("inst fetch queue size must be positive > 0 and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1043:5: note: in expansion of macro ‘fatal’
+ 1043 |     fatal("mis-prediction penalty must be at least 1 cycle");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1046:5: note: in expansion of macro ‘fatal’
+ 1046 |     fatal("front-end speed must be positive and non-zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1068:9: note: in expansion of macro ‘fatal’
+ 1068 |         fatal("bad bimod predictor config (<table_size>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1070:9: note: in expansion of macro ‘fatal’
+ 1070 |         fatal("bad btb config (<num_sets> <associativity>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1088:9: note: in expansion of macro ‘fatal’
+ 1088 |         fatal("bad 2-level pred config (<l1size> <l2size> <hist_size> <xor>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1090:9: note: in expansion of macro ‘fatal’
+ 1090 |         fatal("bad btb config (<num_sets> <associativity>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1107:9: note: in expansion of macro ‘fatal’
+ 1107 |         fatal("bad 2-level pred config (<l1size> <l2size> <hist_size> <xor>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1109:9: note: in expansion of macro ‘fatal’
+ 1109 |         fatal("bad bimod predictor config (<table_size>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1111:9: note: in expansion of macro ‘fatal’
+ 1111 |         fatal("bad combining predictor config (<meta_table_size>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1113:9: note: in expansion of macro ‘fatal’
+ 1113 |         fatal("bad btb config (<num_sets> <associativity>)");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1127:5: note: in expansion of macro ‘fatal’
+ 1127 |     fatal("cannot parse predictor type `%s'", pred_type);
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1136:5: note: in expansion of macro ‘fatal’
+ 1136 |     fatal("bad speculative update stage specifier, use {ID|WB}");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1139:5: note: in expansion of macro ‘fatal’
+ 1139 |     fatal("issue width must be positive non-zero and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1142:5: note: in expansion of macro ‘fatal’
+ 1142 |     fatal("issue width must be positive non-zero and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1145:5: note: in expansion of macro ‘fatal’
+ 1145 |     fatal("commit width must be positive non-zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1148:5: note: in expansion of macro ‘fatal’
+ 1148 |     fatal("RUU size must be a positive number > 1 and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1151:5: note: in expansion of macro ‘fatal’
+ 1151 |     fatal("LSQ size must be a positive number > 1 and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1160:9: note: in expansion of macro ‘fatal’
+ 1160 |         fatal("the l1 data cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1167:9: note: in expansion of macro ‘fatal’
+ 1167 |         fatal("bad l1 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1179:13: note: in expansion of macro ‘fatal’
+ 1179 |             fatal("bad l2 D-cache parms: "
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1194:9: note: in expansion of macro ‘fatal’
+ 1194 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1200:9: note: in expansion of macro ‘fatal’
+ 1200 |         fatal("I-cache l1 cannot access D-cache l1 as it's undefined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1205:9: note: in expansion of macro ‘fatal’
+ 1205 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1211:9: note: in expansion of macro ‘fatal’
+ 1211 |         fatal("I-cache l1 cannot access D-cache l2 as it's undefined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1216:9: note: in expansion of macro ‘fatal’
+ 1216 |         fatal("the l1 inst cache must defined if the l2 cache is defined");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1223:9: note: in expansion of macro ‘fatal’
+ 1223 |         fatal("bad l1 I-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1234:13: note: in expansion of macro ‘fatal’
+ 1234 |             fatal("I-cache l2 cannot access D-cache l2 as it's undefined");
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1241:13: note: in expansion of macro ‘fatal’
+ 1241 |             fatal("bad l2 I-cache parms: "
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1256:9: note: in expansion of macro ‘fatal’
+ 1256 |         fatal("bad TLB parms: <name>:<nsets>:<page_size>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1270:9: note: in expansion of macro ‘fatal’
+ 1270 |         fatal("bad TLB parms: <name>:<nsets>:<page_size>:<assoc>:<repl>");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1278:5: note: in expansion of macro ‘fatal’
+ 1278 |     fatal("l1 data cache latency must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1281:5: note: in expansion of macro ‘fatal’
+ 1281 |     fatal("l2 data cache latency must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1284:5: note: in expansion of macro ‘fatal’
+ 1284 |     fatal("l1 instruction cache latency must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1287:5: note: in expansion of macro ‘fatal’
+ 1287 |     fatal("l2 instruction cache latency must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1290:5: note: in expansion of macro ‘fatal’
+ 1290 |     fatal("bad memory access latency (<first_chunk> <inter_chunk>)");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1293:5: note: in expansion of macro ‘fatal’
+ 1293 |     fatal("all memory access latencies must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1296:5: note: in expansion of macro ‘fatal’
+ 1296 |     fatal("memory bus width must be positive non-zero and a power of two");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1299:5: note: in expansion of macro ‘fatal’
+ 1299 |     fatal("TLB miss latency must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1302:5: note: in expansion of macro ‘fatal’
+ 1302 |     fatal("number of integer ALU's must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1304:5: note: in expansion of macro ‘fatal’
+ 1304 |     fatal("number of integer ALU's must be <= MAX_INSTS_PER_CLASS");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1308:5: note: in expansion of macro ‘fatal’
+ 1308 |     fatal("number of integer multiplier/dividers must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1310:5: note: in expansion of macro ‘fatal’
+ 1310 |     fatal("number of integer mult/div's must be <= MAX_INSTS_PER_CLASS");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1314:5: note: in expansion of macro ‘fatal’
+ 1314 |     fatal("number of memory system ports must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1316:5: note: in expansion of macro ‘fatal’
+ 1316 |     fatal("number of memory system ports must be <= MAX_INSTS_PER_CLASS");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1320:5: note: in expansion of macro ‘fatal’
+ 1320 |     fatal("number of floating point ALU's must be greater than zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1322:5: note: in expansion of macro ‘fatal’
+ 1322 |     fatal("number of floating point ALU's must be <= MAX_INSTS_PER_CLASS");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1326:5: note: in expansion of macro ‘fatal’
+ 1326 |     fatal("number of floating point multiplier/dividers must be > zero");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1328:5: note: in expansion of macro ‘fatal’
+ 1328 |     fatal("number of FP mult/div's must be <= MAX_INSTS_PER_CLASS");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘sim_reg_stats’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1519:9: note: in expansion of macro ‘fatal’
+ 1519 |         fatal("cannot locate any statistic named `%s'", pcstat_vars[i]);
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1523:9: note: in expansion of macro ‘fatal’
+ 1523 |         fatal("`-pcstat' statistical variable `%s' is not an integral type",
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:558:13: note: in expansion of macro ‘panic’
+  558 |          : (panic("bad stat class"), 0))))
+      |             ^~~~~
+sim-outorder.c:1528:28: note: in expansion of macro ‘STATVAL’
+ 1528 |       pcstat_lastvals[i] = STATVAL(stat);
+      |                            ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘sim_load_prog’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1614:5: note: in expansion of macro ‘fatal’
+ 1614 |     fatal("bad pipetrace args, use: <fname|stdout|stderr> <range>");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_init’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1732:5: note: in expansion of macro ‘fatal’
+ 1732 |     fatal("out of virtual memory");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘lsq_init’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1850:5: note: in expansion of macro ‘fatal’
+ 1850 |     fatal("out of virtual memory");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘rslink_init’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1970:9: note: in expansion of macro ‘fatal’
+ 1970 |         fatal("out of virtual memory");
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘eventq_queue_event’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2048:5: note: in expansion of macro ‘panic’
+ 2048 |     panic("event completed");
+      |     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2051:5: note: in expansion of macro ‘panic’
+ 2051 |     panic("event occurred in the past");
+      |     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1931:7: note: in expansion of macro ‘panic’
+ 1931 |       panic("out of rs links");                                         \
+      |       ^~~~~
+sim-outorder.c:2054:3: note: in expansion of macro ‘RSLINK_NEW’
+ 2054 |   RSLINK_NEW(new_ev, rs);
+      |   ^~~~~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘readyq_enqueue’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2183:5: note: in expansion of macro ‘panic’
+ 2183 |     panic("node is already queued");
+      |     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1931:7: note: in expansion of macro ‘panic’
+ 1931 |       panic("out of rs links");                                         \
+      |       ^~~~~
+sim-outorder.c:2187:3: note: in expansion of macro ‘RSLINK_NEW’
+ 2187 |   RSLINK_NEW(new_node, rs);
+      |   ^~~~~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_commit’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2346:13: note: in expansion of macro ‘panic’
+ 2346 |             panic("RUU out of sync with LSQ");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2368:21: note: in expansion of macro ‘panic’
+ 2368 |                     panic("functional unit already in use");
+      |                     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2471:13: note: in expansion of macro ‘panic’
+ 2471 |             panic ("retired instruction has odeps\n");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_recover’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2502:9: note: in expansion of macro ‘panic’
+ 2502 |         panic("empty RUU");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2506:9: note: in expansion of macro ‘panic’
+ 2506 |         panic("RUU head and tail broken");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2513:13: note: in expansion of macro ‘panic’
+ 2513 |             panic("RUU and LSQ out of sync");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_writeback’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2591:9: note: in expansion of macro ‘panic’
+ 2591 |         panic("inst completed and !ready, !issued, or completed");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2600:13: note: in expansion of macro ‘panic’
+ 2600 |             panic("mis-predicted load or store?!?!?");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2683:25: note: in expansion of macro ‘panic’
+ 2683 |                         panic("output dependence already satisfied");
+      |                         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘lsq_refresh’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2760:17: note: in expansion of macro ‘fatal’
+ 2760 |                 fatal("STD unknown array overflow, increase MAX_STD_UNKNOWNS");
+      |                 ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_issue’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2844:13: note: in expansion of macro ‘panic’
+ 2844 |             panic("issued inst !ready, issued, or completed");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2859:17: note: in expansion of macro ‘panic’
+ 2859 |                 panic("store creates result");
+      |                 ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2862:17: note: in expansion of macro ‘panic’
+ 2862 |                 panic("mis-predicted store");
+      |                 ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:2882:25: note: in expansion of macro ‘panic’
+ 2882 |                         panic("functional unit already in use");
+      |                         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘tracer_recover’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3164:5: note: in expansion of macro ‘panic’
+ 3164 |     panic("cannot recover unless in speculative mode");
+      |     ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘spec_mem_access’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3303:13: note: in expansion of macro ‘fatal’
+ 3303 |             fatal("out of virtual memory");
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3410:7: note: in expansion of macro ‘panic’
+ 3410 |       panic("access size not supported in mis-speculative mode");
+      |       ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_link_idep’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:1931:7: note: in expansion of macro ‘panic’
+ 1931 |       panic("out of rs links");                                         \
+      |       ^~~~~
+sim-outorder.c:3517:3: note: in expansion of macro ‘RSLINK_NEW’
+ 3517 |   RSLINK_NEW(link, rs); link->x.opnum = idep_num;
+      |   ^~~~~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘simoo_reg_obj’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3886:7: note: in expansion of macro ‘panic’
+ 3886 |       panic("bogus register bank");
+      |       ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c: In function ‘ruu_dispatch’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3970:13: note: in expansion of macro ‘panic’
+ 3970 |             panic("drained and speculative");
+      |             ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3773:17: note: in expansion of macro ‘panic’
+ 3773 |    (spec_mode ? panic("speculative syscall") : (void) 0),               \
+      |                 ^~~~~
+machine.def:2047:5: note: in expansion of macro ‘SYSCALL’
+ 2047 |     SYSCALL(inst);                                                      \
+      |     ^~~~~~~
+host.h:71:25: note: in expansion of macro ‘SYSCALL_IMPL’
+   71 | #define SYMCAT(X,Y)     X##Y
+      |                         ^
+sim-outorder.c:4000:11: note: in expansion of macro ‘SYMCAT’
+ 4000 |           SYMCAT(OP,_IMPL);                                             \
+      |           ^~~~~~
+machine.def:2049:1: note: in expansion of macro ‘DEFINST’
+ 2049 | DEFINST(SYSCALL,                0xa0,
+      | ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4047:9: note: in expansion of macro ‘fatal’
+ 4047 |         fatal("non-speculative fault (%d) detected @ 0x%08p",
+      |         ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:558:13: note: in expansion of macro ‘panic’
+  558 |          : (panic("bad stat class"), 0))))
+      |             ^~~~~
+sim-outorder.c:4306:20: note: in expansion of macro ‘STATVAL’
+ 4306 |           newval = STATVAL(pcstat_stats[i]);
+      |                    ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c:3923:11: warning: unused variable ‘temp_qword’ [-Wunused-variable]
+ 3923 |   qword_t temp_qword = 0;               /* " ditto " */
+      |           ^~~~~~~~~~
+sim-outorder.c:3917:7: warning: variable ‘br_taken’ set but not used [-Wunused-but-set-variable]
+ 3917 |   int br_taken, br_pred_taken;          /* if br, taken?  predicted taken? */
+      |       ^~~~~~~~
+sim-outorder.c: In function ‘fetch_init’:
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4350:5: note: in expansion of macro ‘fatal’
+ 4350 |     fatal("out of virtual memory");
+      |     ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+machine.def: In function ‘sim_main’:
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:3773:17: note: in expansion of macro ‘panic’
+ 3773 |    (spec_mode ? panic("speculative syscall") : (void) 0),               \
+      |                 ^~~~~
+machine.def:2047:5: note: in expansion of macro ‘SYSCALL’
+ 2047 |     SYSCALL(inst);                                                      \
+      |     ^~~~~~~
+host.h:71:25: note: in expansion of macro ‘SYSCALL_IMPL’
+   71 | #define SYMCAT(X,Y)     X##Y
+      |                         ^
+sim-outorder.c:4686:15: note: in expansion of macro ‘SYMCAT’
+ 4686 |               SYMCAT(OP,_IMPL);                                         \
+      |               ^~~~~~
+machine.def:2049:1: note: in expansion of macro ‘DEFINST’
+ 2049 | DEFINST(SYSCALL,                0xa0,
+      | ^~~~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4697:15: note: in expansion of macro ‘panic’
+ 4697 |               panic("attempted to execute a bogus opcode");
+      |               ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:103:20: warning: passing argument 2 of ‘_fatal’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |   _fatal(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4701:13: note: in expansion of macro ‘fatal’
+ 4701 |             fatal("fault (%d) detected @ 0x%08p", fault, regs.regs_PC);
+      |             ^~~~~
+misc.h:106:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  106 | _fatal(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+sim-outorder.c:4655:15: warning: unused variable ‘temp_qword’ [-Wunused-variable]
+ 4655 |       qword_t temp_qword = 0;           /* " ditto " */
+      |               ^~~~~~~~~~
+sim-outorder.c:4648:17: warning: variable ‘target_PC’ set but not used [-Wunused-but-set-variable]
+ 4648 |       md_addr_t target_PC;              /* actual next/target PC address */
+      |                 ^~~~~~~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4735:9: note: in expansion of macro ‘panic’
+ 4735 |         panic("RUU_num < LSQ_num");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4737:9: note: in expansion of macro ‘panic’
+ 4737 |         panic("RUU_head/RUU_tail wedged");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+misc.h:116:20: warning: passing argument 2 of ‘_panic’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  116 |   _panic(__FILE__, __FUNCTION__, __LINE__, fmt, ## args)
+      |                    ^~~~~~~~~~~~
+sim-outorder.c:4739:9: note: in expansion of macro ‘panic’
+ 4739 |         panic("LSQ_head/LSQ_tail wedged");
+      |         ^~~~~
+misc.h:119:26: note: expected ‘char *’ but argument is of type ‘const char *’
+  119 | _panic(char *file, char *func, int line, char *fmt, ...)
+      |                    ~~~~~~^~~~
+make: *** [Makefile:405: sim-outorder.o] Error 1
